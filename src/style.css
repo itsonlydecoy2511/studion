@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+} /* RESET DE CSS */
+
+nav{
+    width: 80%; /* não importa o tamanho da tela, o nav vai ocupar sempre 80% */
+    margin: 20px, auto; /* cima/baixo, direita/esquerda*/
+    display: flex; /* o alinhamento entre os elemnetos do nav */
+    justify-content: space-around; /* espaço entre os elementos - evenly - around -between (o mais loonge entre os elementos)  */
+    background-color: #999;
+}
+
+h1{
+    color: #FFff;
+    font-size: 40px;
+    height: 50px;
+   
+}
+
+.on{ /* ID usa # - só existe um - class usa .  - repete */
+    color: #eaab0a;
+}
+.eventos{
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: -5px;
+
+}
