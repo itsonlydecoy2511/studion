@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-} /* RESET DE CSS */
+    font-family: montserrat;
+} /* RESET DE CSS e define como padrão pra página */
 
 nav{
     width: 80%; /* não importa o tamanho da tela, o nav vai ocupar sempre 80% */
@@ -15,6 +16,7 @@ h1{
     color: #FFff;
     font-size: 40px;
     height: 50px;
+
    
 }
 
@@ -26,5 +28,232 @@ h1{
     font-size: 15px;
     font-weight: 500;
     margin-top: -5px;
+    font-size: 15px;
 
+}
+
+ul{
+    display: flex;
+    list-style: none; /* retira os pontos da lista */
+    height: 50px;
+    align-items: center; /* alinha os itens no centro */
+}
+
+a{
+    text-decoration: none; /* retira o sublinhado */
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: 30px;
+    text-transform: uppercase; /* deixa o texto em maiúsculo */
+}
+
+a:hover{ /* quando o mouse passar por cima do link */
+    color: #ffc501;
+    transition: 0.5s; /* tempo de transição */
+}
+
+.empresa{
+    color:#eaab0a;
+}
+
+header{
+
+    background: url(./imagens/header.png), lightgray 50% / cover no-repeat; /* cover - cobre toda a área do header - contain - cabe todo o conteúdo */
+    width: 100%;
+    height: 600px;
+    margin-top: -90px;
+    display: flex;
+    flex-direction: column;  /*alinha os itens na vertical */  
+    align-items: end; /* alinha os itens na direita */
+}
+
+header > h2{
+    color: #eaab0a;
+    font-size: 120px;
+    font-weight: 900;
+    margin-top: 180px;
+    margin-right: 320px;
+}
+
+header > p {
+    color: #fff;
+    font-size: 20 px;
+    font-weight: 400;
+    width: 645px;
+    height: 67px;
+    margin-right: 270px ;
+}
+
+.section1{
+    position: relative; /* para o z-index funcionar */
+    width: 100%;
+    height: 715px;
+    padding-top: 50px;
+}
+
+.section1 > h4{ 
+    position: absolute; /* tira o elemento do fluxo normal da página */
+    font-size: 25px;
+    font-weight: 800;
+    width: 430px;
+    top: 150px;
+    left: 350px;
+}
+
+.section1 > p{
+    width: 494px;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.section1 > .paragrafo1{
+    position: absolute;
+    top: 280px;
+    left: 350px;
+        width: 494 px;
+
+}
+
+.section1 > .paragrafo2{
+    position: absolute;
+    top: 420px;
+    left: 350px;
+       
+
+}   
+
+.section1 > img{
+    position: absolute;
+    width: 350px;
+    height: 500px;
+    top: 100px;
+    right: 200px;
+}
+
+.section1 > div{
+    position: absolute;
+    margin-top: 20px;
+    right: 150px; 
+    
+}
+
+.section2{
+    background-color: #ffc501;
+    height: 562px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section2 > h4{
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.section3 {
+    height: 837px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+footer{
+    background-color: #000;
+    width: 100%;
+    height: 300px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    
+}
+
+footer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1149.402px;
+    width: 100%;
+    margin:  0 auto; /* centraliza o conteúdo do footer */
+} 
+
+footer > div > form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+footer > div > form > label{
+    display: block ;
+    width: 160px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+footer > div > form > input{
+    width: 312px;
+    height: 50px;
+    background: #eaab0a;
+    border: none;
+    padding: 0 5px;
+}
+
+footer > div > form > input ::placeholder{ /* estiliza o texto que fica dentro do input */
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+}
+
+footer > div > form > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 50px;
+    cursor: pointer; /* quando passa o mouse por cima do botão, o cursor muda para uma mãozinha */
+}
+
+footer > hr{
+    width: 1149.402px;
+    height: 0;
+    stroke-width: 0.5px;
+    border:  0.5px solid #fff; /* linha fina */
+}   
+
+footer > p { 
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+footer > p  >span {
+    color: #eaab0a;
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;  /* centraliza verticalmente */
+    gap: 15px; /* espaço entre os ícones */
+}
+
+.redes-sociais img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.2);
+    filter: none; /* volta à cor original ao passar o mouse */
 }
