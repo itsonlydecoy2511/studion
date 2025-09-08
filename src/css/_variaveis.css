@@ -1,0 +1,10 @@
+:root {     
+    /* variáveis de CSS - padrão web  
+    QUANDO MUDAR AQUI NA RAIZ, MUDA TODO A PÁGINA, 
+    SEM PRECISAR ALTERAR UM POR UM*/
+--color-primary: #eaab0a;
+--color-secondary: #ffc501;
+--text-primary: #fff;
+--text-secondary: #000;
+--bg-footer: #000; 
+}
