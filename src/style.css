@@ -1,33 +1,57 @@
+
+@import ".css/_base.css"; /* importa toda a base - o ponto é pq está na mesma pasta */
+@import ".css/_variaveis.css"; /* importa o {} de variaveis */
+@import ".css/_layout.css"; /* importa o arquivo _layout.css - o ponto é pq está na mesma pasta */
+/*separar todos as variaões que podem ser usadas em todo site */
+:root {     
+    /* variáveis de CSS - padrão web  
+    QUANDO MUDAR AQUI NA RAIZ, MUDA TODO A PÁGINA, 
+    SEM PRECISAR ALTERAR UM POR UM*/
+--color-primary: #eaab0a;
+--color-secondary: #ffc501;
+--text-primary: #fff;
+--text-secondary: #000;
+--bg-footer: #000; 
+}
 *{
     margin: 0;
     padding: 0;
     font-family: montserrat;
+    transition:  all 5s ease-in-out
 } /* RESET DE CSS e define como padrão pra página */
 
+
 nav{
-    width: 80%; /* não importa o tamanho da tela, o nav vai ocupar sempre 80% */
-    margin: 20px, auto; /* cima/baixo, direita/esquerda*/
+    width: 90%; /* não importa o tamanho da tela, o nav vai ocupar sempre 80% */
+    margin: 2rem, auto; /* cima/baixo, direita/esquerda*/
     display: flex; /* o alinhamento entre os elemnetos do nav */
     justify-content: space-around; /* espaço entre os elementos - evenly - around -between (o mais loonge entre os elementos)  */
     background-color: #999;
 }
 
 h1{
-    color: #FFff;
-    font-size: 40px;
+    margin-left: 4.5rem;
+    color: var(--text-primary);
+    font-size: 2rem; 
+    /* outra unidade de medida pro PX - 
+    em -pega a base do elemento pai- 
+    rem - leva como base o patrao do htlm 
+    1em = 16px - 2em = 32px
+     */
     height: 50px;
 
    
 }
 
 .on{ /* ID usa # - só existe um - class usa .  - repete */
-    color: #eaab0a;
+    color: var(--color-primary);
 }
 .eventos{
     display: block;
     font-size: 15px;
     font-weight: 500;
     margin-top: -5px;
+    margin-right: 15px;
     font-size: 15px;
 
 }
@@ -41,20 +65,22 @@ ul{
 
 a{
     text-decoration: none; /* retira o sublinhado */
-    color: #fff;
+    color: var(--text-primary);
     font-weight: 500;
     font-size: 15px;
     margin-left: 30px;
     text-transform: uppercase; /* deixa o texto em maiúsculo */
+   transition: color 2s linear, margin 0.5s ease; 
+    /* color = cor do texto / margin = espaçamento */ /* tempo de transião/ Fica uma transião sutil de quando o mouse passa em cima aos poucos fica da cor*/
 }
 
 a:hover{ /* quando o mouse passar por cima do link */
-    color: #ffc501;
-    transition: 0.5s; /* tempo de transição */
+    color: var(--color-secondary);
+    margin-left: 50px; /* exemplo: aumenta o espaçamento no hover */
 }
 
 .empresa{
-    color:#eaab0a;
+    color: var(--color-primary);
 }
 
 header{
@@ -69,7 +95,7 @@ header{
 }
 
 header > h2{
-    color: #eaab0a;
+    color: var(--color-primary);
     font-size: 120px;
     font-weight: 900;
     margin-top: 180px;
@@ -77,8 +103,8 @@ header > h2{
 }
 
 header > p {
-    color: #fff;
-    font-size: 20 px;
+    color: var(--text-primary);
+    font-size: 1rem;
     font-weight: 400;
     width: 645px;
     height: 67px;
@@ -98,37 +124,22 @@ header > p {
     font-weight: 800;
     width: 430px;
     top: 150px;
-    left: 350px;
+    left: 246px;
 }
 
-.section1 > p{
-    width: 494px;
-    font-size: 25px;
+.section1 > h4 > small{
+    margin-top: 40px; 
+    display: block;
     font-weight: 400;
+    line-height: 25px; /* espaçamento entre as linhas */
 }
-
-.section1 > .paragrafo1{
-    position: absolute;
-    top: 280px;
-    left: 350px;
-        width: 494 px;
-
-}
-
-.section1 > .paragrafo2{
-    position: absolute;
-    top: 420px;
-    left: 350px;
-       
-
-}   
 
 .section1 > img{
     position: absolute;
-    width: 350px;
-    height: 500px;
-    top: 100px;
-    right: 200px;
+    width: 550px;
+    height: 700px;
+    top: 65px;
+    right: 300px;
 }
 
 .section1 > div{
@@ -139,7 +150,7 @@ header > p {
 }
 
 .section2{
-    background-color: #ffc501;
+    background-color: var(--color-secondary);
     height: 562px;
     display: flex;
     flex-direction: column;
@@ -160,10 +171,10 @@ header > p {
 }
 
 footer{
-    background-color: #000;
+    background-color: var(--bg-footer);
     width: 100%;
     height: 300px;
-    color: #fff;
+    color: var(--text-primary);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -198,13 +209,13 @@ footer > div > form > label{
 footer > div > form > input{
     width: 312px;
     height: 50px;
-    background: #eaab0a;
+    background: var(--color-primary);
     border: none;
     padding: 0 5px;
 }
 
 footer > div > form > input ::placeholder{ /* estiliza o texto que fica dentro do input */
-    color: #fff;
+    color: var(--text-primary);
     font-size: 15px;
     font-weight: 400;
     text-transform: uppercase;
@@ -224,7 +235,7 @@ footer > hr{
     width: 1149.402px;
     height: 0;
     stroke-width: 0.5px;
-    border:  0.5px solid #fff; /* linha fina */
+    border:  0.5px solid var(--text-primary); /* linha fina */
 }   
 
 footer > p { 
@@ -237,7 +248,7 @@ footer > p {
 }
 
 footer > p  >span {
-    color: #eaab0a;
+    color: var(--color-primary);
 }
 
 .redes-sociais {
