@@ -3,6 +3,13 @@ html
 /*da pra usar @import - mas não é recomendado -
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@*/
 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    transition:  color 1s ease-in-out
+} /* RESET DE CSS e define como padrão pra página */
+
 html{
-    font-size: 62.5%; /* 1rem = 10px - 32 vai ser 3.2rem / facilita o cálculo */
+    font-size: 62.5%; /* 1rem = 10px - 10/16 = 62.5% */
 }
