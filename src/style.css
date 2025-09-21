@@ -6,62 +6,23 @@
 @import "./css/_header.css";
 
 /*separar todos as variaões que podem ser usadas em todo site */
-:root {     
-    /* variáveis de CSS - padrão web  
-    QUANDO MUDAR AQUI NA RAIZ, MUDA TODO A PÁGINA, 
-    SEM PRECISAR ALTERAR UM POR UM*/
---color-primary: #eaab0a;
---color-secondary: #ffc501;
---text-primary: #fff;
---text-secondary: #000;
---bg-footer: #000; 
-}
-
-header{
-
-    background: url(imagens/header.png), lightgray 50% / cover no-repeat; /* cover - cobre toda a área do header - contain - cabe todo o conteúdo */
-    width: 100%;
-    height: 60rem;
-    margin-top: -9rem;
-    display: flex;
-    flex-direction: column;  /*alinha os itens na vertical */  
-    align-items: end; /* alinha os itens na direita */
-}
-
-header > h2{
-    color: var(--color-primary);
-    font-size: 12rem;
-    font-weight: 900;
-    margin-top: 18rem;
-    margin-right: 32rem;
-}
-
-header > p {
-    color: var(--text-primary);
-    font-size: 2rem;
-    font-weight: 400;
-    width: 64.5rem;
-    height: 6.7rem;
-    margin-right: 27rem;
-}
-
-
 
 
 .section1{
-    position: relative; /* para o z-index funcionar */
+    /*position: relative;  para o z-index funcionar */
     width: 100%;
-    height: 71.5rem;
+    height: 60rem;
     padding-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr; /*a colina 3 ocupa 5 espaços em relação ao espaço*/
 }
 
 .section1 > h4{ 
-    position: absolute; /* tira o elemento do fluxo normal da página */
+    /*position: absolute;  tira o elemento do fluxo normal da página */
     font-size: 2.5rem;
     font-weight: 800;
-    width: 43rem;
-    top: 15rem;
-    left: 24.6rem;
+    margin-top: 10rem;    
+    grid-column: 2;
 }
 
 .section1 > h4 > small{
@@ -72,11 +33,11 @@ header > p {
 }
 
 .section1 > img{
-    position: absolute;
-    width: 55rem;
-    height: 70rem;
+     width: 45rem;
+    height: 60rem;
     top: 6.5rem;
     right: 30rem;
+    margin-left: 10rem;
 }
 
 .section1 > div{
@@ -101,9 +62,14 @@ header > p {
 }
 
 .section3 {
+    margin-top: 2rem;
     height: 83.7rem;
-    display: flex;
+    grid-template-columns: 1fr 1fr  1fr;
     align-items: center;
     justify-self: center;
+    grid-template-columns: 1fr;
 }
 
+.section3 > div {
+    align-items: center;
+}

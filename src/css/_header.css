@@ -1,6 +1,6 @@
 header{
 
-    background: url(imagens/header.png), lightgray 50% / cover no-repeat; /* cover - cobre toda a área do header - contain - cabe todo o conteúdo */
+    background: url(../imagens/header.png), lightgray 50% / cover no-repeat; /* cover - cobre toda a área do header - contain - cabe todo o conteúdo */
     width: 100%;
     height: 60rem;
     margin-top: -9rem;
