@@ -1,7 +1,10 @@
 
-@import ".css/_base.css"; /* importa toda a base - o ponto é pq está na mesma pasta */
-@import ".css/_variaveis.css"; /* importa o {} de variaveis */
-@import ".css/_layout.css"; /* importa o arquivo _layout.css - o ponto é pq está na mesma pasta */
+@import "./css/_base.css"; /* importa toda a base - o ponto é pq está na mesma pasta */
+@import "./css/_variaveis.css"; /* importa o {} de variaveis */
+@import "./css/_nav.css"; /* importa o arquivo _layout.css - o ponto é pq está na mesma pasta */
+@import "./css/_footer.css";
+@import "./css/_header.css";
+
 /*separar todos as variaões que podem ser usadas em todo site */
 :root {     
     /* variáveis de CSS - padrão web  
@@ -13,82 +16,13 @@
 --text-secondary: #000;
 --bg-footer: #000; 
 }
-*{
-    margin: 0;
-    padding: 0;
-    font-family: montserrat;
-    transition:  all 5s ease-in-out
-} /* RESET DE CSS e define como padrão pra página */
-
-
-nav{
-    width: 90%; /* não importa o tamanho da tela, o nav vai ocupar sempre 80% */
-    margin: 2rem, auto; /* cima/baixo, direita/esquerda*/
-    display: flex; /* o alinhamento entre os elemnetos do nav */
-    justify-content: space-around; /* espaço entre os elementos - evenly - around -between (o mais loonge entre os elementos)  */
-    background-color: #999;
-}
-
-h1{
-    margin-left: 4.5rem;
-    color: var(--text-primary);
-    font-size: 2rem; 
-    /* outra unidade de medida pro PX - 
-    em -pega a base do elemento pai- 
-    rem - leva como base o patrao do htlm 
-    1em = 16px - 2em = 32px
-     */
-    height: 50px;
-
-   
-}
-
-.on{ /* ID usa # - só existe um - class usa .  - repete */
-    color: var(--color-primary);
-}
-.eventos{
-    display: block;
-    font-size: 15px;
-    font-weight: 500;
-    margin-top: -5px;
-    margin-right: 15px;
-    font-size: 15px;
-
-}
-
-ul{
-    display: flex;
-    list-style: none; /* retira os pontos da lista */
-    height: 50px;
-    align-items: center; /* alinha os itens no centro */
-}
-
-a{
-    text-decoration: none; /* retira o sublinhado */
-    color: var(--text-primary);
-    font-weight: 500;
-    font-size: 15px;
-    margin-left: 30px;
-    text-transform: uppercase; /* deixa o texto em maiúsculo */
-   transition: color 2s linear, margin 0.5s ease; 
-    /* color = cor do texto / margin = espaçamento */ /* tempo de transião/ Fica uma transião sutil de quando o mouse passa em cima aos poucos fica da cor*/
-}
-
-a:hover{ /* quando o mouse passar por cima do link */
-    color: var(--color-secondary);
-    margin-left: 50px; /* exemplo: aumenta o espaçamento no hover */
-}
-
-.empresa{
-    color: var(--color-primary);
-}
 
 header{
 
-    background: url(./imagens/header.png), lightgray 50% / cover no-repeat; /* cover - cobre toda a área do header - contain - cabe todo o conteúdo */
+    background: url(imagens/header.png), lightgray 50% / cover no-repeat; /* cover - cobre toda a área do header - contain - cabe todo o conteúdo */
     width: 100%;
-    height: 600px;
-    margin-top: -90px;
+    height: 60rem;
+    margin-top: -9rem;
     display: flex;
     flex-direction: column;  /*alinha os itens na vertical */  
     align-items: end; /* alinha os itens na direita */
@@ -96,62 +30,65 @@ header{
 
 header > h2{
     color: var(--color-primary);
-    font-size: 120px;
+    font-size: 12rem;
     font-weight: 900;
-    margin-top: 180px;
-    margin-right: 320px;
+    margin-top: 18rem;
+    margin-right: 32rem;
 }
 
 header > p {
     color: var(--text-primary);
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 400;
-    width: 645px;
-    height: 67px;
-    margin-right: 270px ;
+    width: 64.5rem;
+    height: 6.7rem;
+    margin-right: 27rem;
 }
+
+
+
 
 .section1{
     position: relative; /* para o z-index funcionar */
     width: 100%;
-    height: 715px;
-    padding-top: 50px;
+    height: 71.5rem;
+    padding-top: 5rem;
 }
 
 .section1 > h4{ 
     position: absolute; /* tira o elemento do fluxo normal da página */
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 800;
-    width: 430px;
-    top: 150px;
-    left: 246px;
+    width: 43rem;
+    top: 15rem;
+    left: 24.6rem;
 }
 
 .section1 > h4 > small{
-    margin-top: 40px; 
+    margin-top: 4rem; 
     display: block;
     font-weight: 400;
-    line-height: 25px; /* espaçamento entre as linhas */
+    line-height: 2.5rem; /* espaçamento entre as linhas */
 }
 
 .section1 > img{
     position: absolute;
-    width: 550px;
-    height: 700px;
-    top: 65px;
-    right: 300px;
+    width: 55rem;
+    height: 70rem;
+    top: 6.5rem;
+    right: 30rem;
 }
 
 .section1 > div{
     position: absolute;
-    margin-top: 20px;
-    right: 150px; 
+    margin-top: 2rem;
+    right: 15rem; 
     
 }
 
 .section2{
     background-color: var(--color-secondary);
-    height: 562px;
+    height: 56.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,112 +96,14 @@ header > p {
 }
 
 .section2 > h4{
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 800;
 }
 
 .section3 {
-    height: 837px;
+    height: 83.7rem;
     display: flex;
     align-items: center;
     justify-self: center;
 }
 
-footer{
-    background-color: var(--bg-footer);
-    width: 100%;
-    height: 300px;
-    color: var(--text-primary);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-transform: uppercase;
-    
-}
-
-footer > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1149.402px;
-    width: 100%;
-    margin:  0 auto; /* centraliza o conteúdo do footer */
-} 
-
-footer > div > form{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-
-footer > div > form > label{
-    display: block ;
-    width: 160px;
-    font-size: 15px;
-    font-weight: 400;
-}
-
-footer > div > form > input{
-    width: 312px;
-    height: 50px;
-    background: var(--color-primary);
-    border: none;
-    padding: 0 5px;
-}
-
-footer > div > form > input ::placeholder{ /* estiliza o texto que fica dentro do input */
-    color: var(--text-primary);
-    font-size: 15px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: -0.3px;
-}
-
-footer > div > form > button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 50px;
-    cursor: pointer; /* quando passa o mouse por cima do botão, o cursor muda para uma mãozinha */
-}
-
-footer > hr{
-    width: 1149.402px;
-    height: 0;
-    stroke-width: 0.5px;
-    border:  0.5px solid var(--text-primary); /* linha fina */
-}   
-
-footer > p { 
-    font-size: 15px;
-    font-weight: 400;
-    letter-spacing: -0.3px;
-    text-transform: uppercase;
-    text-align: center;
-
-}
-
-footer > p  >span {
-    color: var(--color-primary);
-}
-
-.redes-sociais {
-    display: flex;
-    align-items: center;  /* centraliza verticalmente */
-    gap: 15px; /* espaço entre os ícones */
-}
-
-.redes-sociais img {
-    width: 30px;
-    height: 30px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.redes-sociais img:hover {
-    transform: scale(1.2);
-    filter: none; /* volta à cor original ao passar o mouse */
-}

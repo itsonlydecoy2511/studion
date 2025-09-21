@@ -1,0 +1,99 @@
+footer
+{
+    background-color: var(--bg-footer);
+    width: 100%;
+    height: 30rem;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+    
+}
+
+footer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 114.9402rem;
+    width: 100%;
+    margin:  0 auto; /* centraliza o conteúdo do footer */
+} 
+
+footer > div > form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+footer > div > form > label{
+    display: block ;
+    width: 16rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+footer > div > form > input{
+    width: 31.2rem;
+    height: 5rem;
+    background: var(--color-primary);
+    border: none;
+    padding: 0 5px;
+}
+
+footer > div > form > input ::placeholder{ /* estiliza o texto que fica dentro do input */
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+}
+
+footer > div > form > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 5rem;
+    cursor: pointer; /* quando passa o mouse por cima do botão, o cursor muda para uma mãozinha */
+}
+
+footer > hr{
+    width: 114.9402rem;
+    height: 0;
+    stroke-width: 0.05rem;
+    border:  0.05rem solid var(--text-primary); /* linha fina */
+}   
+
+footer > p { 
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.03rem;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+footer > p  >span {
+    color: var(--color-primary);
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;  /* centraliza verticalmente */
+    gap: 15px; /* espaço entre os ícones */
+}
+
+.redes-sociais img {
+    width: 3rem;
+    height: 3rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.2);
+    filter: none; /* volta à cor original ao passar o mouse */
+}
