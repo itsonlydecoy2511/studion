@@ -95,3 +95,43 @@ footer > hr {
 .copyright span {
     color: var(--color-primary);
 }
+
+@media screen and (max-width: 860px){
+    .footer__container{
+    align-items: center;
+    gap: 2rem;
+    }
+    .footer__container h2{
+        font-size: 3rem;
+    }
+    .footer__container form{
+        max-width: 35rem;
+    }
+    }
+
+@media screen and (max-width: 400px){
+
+    .footer__container h2{
+        font-size: 2rem;
+
+    }
+    .footer__container form{
+        max-width: 25rem;
+    }
+    .footer__container label{
+        font-size:  1rem;
+    }
+
+    .footer__container input::placeholder{
+        font-size: 1rem;
+
+    }
+
+    .socials{
+        gap: 1rem;
+    }
+
+    .copyright{
+        font-size: 1rem;
+    }
+}
