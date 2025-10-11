@@ -1,99 +1,97 @@
-footer
-{
+.footer {
+    color: var(--text-primary);
     background-color: var(--bg-footer);
     width: 100%;
-    height: 30rem;
-    color: var(--text-primary);
+    padding: 4rem 6rem; /* mais espaço lateral */
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    gap: 3rem; /* espaçamento entre blocos */
     text-transform: uppercase;
-    
 }
 
-footer > div {
+/* container principal do footer (logo, formulário, redes sociais) */
+.footer__container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 114.9402rem;
-    width: 100%;
-    margin:  0 auto; /* centraliza o conteúdo do footer */
-} 
-
-footer > div > form{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between; /* separa logo e formulário */
+    align-items: center; /* alinha verticalmente */
+    flex-wrap: wrap; /* quebra em telas menores */
+    gap: 2rem;
 }
 
-footer > div > form > label{
-    display: block ;
-    width: 16rem;
-    font-size: 1.5rem;
+/* logotipo */
+.footer__container h2 {
+    font-size: 3.5rem;
+}
+
+/* bloco do formulário */
+.footer__container form {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border: 1px solid var(--text-primary); /* borda estilo referência */
+    max-height: 5rem;
+}
+
+/* texto acima do input */
+.footer__container label {
+    font-size: 1.3rem;
     font-weight: 400;
+    margin-bottom: 0.8rem; /* separa o texto do input */
+    display: flex;
 }
 
-footer > div > form > input{
-    width: 31.2rem;
-    height: 5rem;
+/* input de e-mail */
+.footer__container input {
     background: var(--color-primary);
     border: none;
-    padding: 0 5px;
-}
-
-footer > div > form > input ::placeholder{ /* estiliza o texto que fica dentro do input */
-    color: var(--text-primary);
+    padding: 0 1rem;
     font-size: 1.5rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: -0.3px;
+    color: var(--text-primary);
+    width: 22rem;
+    height: 5rem;
 }
 
-footer > div > form > button{
+.footer__container input::placeholder {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+/* botão com ícone (aviãozinho) */
+.footer__container button {
+    width: 6rem;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 6rem;
-    height: 5rem;
-    cursor: pointer; /* quando passa o mouse por cima do botão, o cursor muda para uma mãozinha */
+    background: var(--text-primary);
+    cursor: pointer;
+    border: none;
 }
 
-footer > hr{
-    width: 114.9402rem;
-    height: 0;
-    stroke-width: 0.05rem;
-    border:  0.05rem solid var(--text-primary); /* linha fina */
-}   
+/* redes sociais */
+.socials {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
 
-footer > p { 
+/* linha divisória */
+footer > hr {
+    width: 100%;
+    max-width: 110rem;
+    border: 0.05rem solid var(--text-primary);
+}
+
+/* direitos autorais */
+.copyright {
     font-size: 1.5rem;
     font-weight: 400;
-    letter-spacing: -0.03rem;
     text-transform: uppercase;
     text-align: center;
-
 }
 
-footer > p  >span {
+.copyright span {
     color: var(--color-primary);
-}
-
-.redes-sociais {
-    display: flex;
-    align-items: center;  /* centraliza verticalmente */
-    gap: 15px; /* espaço entre os ícones */
-}
-
-.redes-sociais img {
-    width: 3rem;
-    height: 3rem;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.redes-sociais img:hover {
-    transform: scale(1.2);
-    filter: none; /* volta à cor original ao passar o mouse */
 }

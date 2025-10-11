@@ -4,106 +4,13 @@
 @import "./css/_nav.css"; /* importa o arquivo _layout.css - o ponto é pq está na mesma pasta */
 @import "./css/_footer.css";
 @import "./css/_header.css";
-
-/*separar todos as variaões que podem ser usadas em todo site */
-:root {     
-    /* variáveis de CSS - padrão web  
-    QUANDO MUDAR AQUI NA RAIZ, MUDA TODO A PÁGINA, 
-    SEM PRECISAR ALTERAR UM POR UM*/
---color-primary: #eaab0a;
---color-secondary: #ffc501;
---text-primary: #fff;
---text-secondary: #000;
---bg-footer: #000; 
-}
-
-header{
-
-    background: url(imagens/header.png), lightgray 50% / cover no-repeat; /* cover - cobre toda a área do header - contain - cabe todo o conteúdo */
-    width: 100%;
-    height: 60rem;
-    margin-top: -9rem;
-    display: flex;
-    flex-direction: column;  /*alinha os itens na vertical */  
-    align-items: end; /* alinha os itens na direita */
-}
-
-header > h2{
-    color: var(--color-primary);
-    font-size: 12rem;
-    font-weight: 900;
-    margin-top: 18rem;
-    margin-right: 32rem;
-}
-
-header > p {
-    color: var(--text-primary);
-    font-size: 2rem;
-    font-weight: 400;
-    width: 64.5rem;
-    height: 6.7rem;
-    margin-right: 27rem;
-}
+@import "./css/_empresa.css";
 
 
 
 
-.section1{
-    position: relative; /* para o z-index funcionar */
-    width: 100%;
-    height: 71.5rem;
-    padding-top: 5rem;
-}
 
-.section1 > h4{ 
-    position: absolute; /* tira o elemento do fluxo normal da página */
-    font-size: 2.5rem;
-    font-weight: 800;
-    width: 43rem;
-    top: 15rem;
-    left: 24.6rem;
-}
 
-.section1 > h4 > small{
-    margin-top: 4rem; 
-    display: block;
-    font-weight: 400;
-    line-height: 2.5rem; /* espaçamento entre as linhas */
-}
 
-.section1 > img{
-    position: absolute;
-    width: 55rem;
-    height: 70rem;
-    top: 6.5rem;
-    right: 30rem;
-}
 
-.section1 > div{
-    position: absolute;
-    margin-top: 2rem;
-    right: 15rem; 
-    
-}
-
-.section2{
-    background-color: var(--color-secondary);
-    height: 56.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.section2 > h4{
-    font-size: 2.5rem;
-    font-weight: 800;
-}
-
-.section3 {
-    height: 83.7rem;
-    display: flex;
-    align-items: center;
-    justify-self: center;
-}
 

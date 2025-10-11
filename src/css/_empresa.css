@@ -1,0 +1,53 @@
+.section1{
+  display: flex;
+  align-items: center;
+    justify-content: space-around; /* meio termo entre center e space-between */
+  padding-top: 6rem;
+}
+
+.section1 .text{
+  font-size: 2.5rem;
+  font-weight: 800;
+  max-width: 40rem;
+}
+
+.section1 .text small{
+  margin-top: 2rem; /* diminui para aproximar o texto */
+  font-weight: 400;
+  display: block;
+  margin-top: 6rem;
+}
+
+.lines{
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  max-width: 55rem;
+  display: block;
+  margin: 0;
+}
+
+.section2{
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem;
+}
+
+.section2 > h4{
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.section3 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.section3 img{
+  width: 100%;
+  max-width: 111rem;
+}
