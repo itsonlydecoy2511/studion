@@ -1,29 +1,52 @@
-header{
 
-    /* foi para o htlm -  background: url(imagens/header.png), lightgray 50% / cover no-repeat; cover - cobre toda a área do header - contain - cabe todo o conteúdo */
-    background-color: lightgray;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+header{ /*sem isso o texto do nav fica branco*/
+header {
+    position: relative;     /* referência para a imagem de fundo */
+    width: 100%;            /* ocupa toda a largura da tela */
+    height: 100vh;          /* ocupa toda a altura visível da tela */
+    overflow: hidden;       /* impede a imagem de sair da área do header */
+    margin: 0;              /* remove espaço externo */
+    padding: 0;             /* remove espaço interno */
+}
+    }
+
+.headerbg{
+    position: absolute;
     width: 100%;
-    margin-top: -9rem;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /*são tipo as camadas do photoshop*/
+     object-fit: cover;        /* cobre todo o espaço sem distorcer */
+    object-position: center;  /* centraliza o foco da imagem */
+    /* outras opções:
+       contain → mostra tudo (pode sobrar espaço)
+       fill → estica (pode distorcer)
+       none → mantém o tamanho original
+       scale-down → usa o menor tamanho possível
+    */
+    filter: brightness(0.5); /* escurece a imagem pra o texto aparecer melhor */
 
 }
 
 .container__header{
      display: flex;
      flex-direction: column;  /*alinha os itens na vertical */  
-    align-items: end;
+    align-items: flex-end;
     height: 100%;
+    padding: 0 10rem;
+    color: var(--text-primary);
     min-height: 85vh; /*o minimo que mostra é 70% da tela do navegador*/
     justify-content: center;
+    text-align: right;
 }
 
 
 
 .container__header > h2{
     color: var(--color-primary);
-    font-size: 12rem;
+    font-size: 10rem;
     font-weight: 900;
 }
 
@@ -31,18 +54,31 @@ header{
     color: var(--text-primary);
     font-size: 2rem;
     font-weight: 400;
-    max-width: 64.5rem;
+    max-width: 60rem;
     width: 100%;
+    text-wrap: pretty; /*balance - justifica o texto/ no wrap em uma linha só / wrap padrão /pretty nunca deixa uma palavra sozinha na lihha*/ 
 }
 
-@media screen and (max-width: 800px;){
-    header h2{
-        font-size: 8rem;
-    }
-}
-@media screen and (max-width: 390px;){
-    header h2{
-        font-size: 5rem;
+@media screen and (max-width: 800px){
+ .container__header h2{
+       font-size: 8rem;
+ }
+ .container__header p{
+        font-size: 1.8rem;
+        max-width: 50rem;
     }
     
+    }
+
+@media screen and (max-width: 460px){
+    .container__header h2{
+        font-size: 6rem;
+        
+    }
+    
+
+.container__header p{
+        font-size: 1.4rem;
+        max-width: 40rem;
+    }
 }
