@@ -1,137 +1,153 @@
 .footer {
-    color: var(--text-primary);
-    background-color: var(--bg-footer);
-    width: 100%;
-    padding: 4rem 6rem; /* mais espaço lateral */
-    display: flex;
-    flex-direction: column;
-    gap: 3rem; /* espaçamento entre blocos */
-    text-transform: uppercase;
+  color: var(--text-primary);
+  background-color: var(--bg-footer);
+  width: 100%;
+  padding: 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  text-transform: uppercase;
 }
 
 /* container principal do footer (logo, formulário, redes sociais) */
 .footer__container {
-    display: flex;
-    justify-content: space-between; /* separa logo e formulário */
-    align-items: center; /* alinha verticalmente */
-    flex-wrap: wrap; /* quebra em telas menores */
-    gap: 2rem;
+  display: flex;
+  justify-content: space-between; /* separa logo, form e ícones */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 1rem; /* espaço entre form e ícones */
 }
 
-/* logotipo */
+/* título principal */
 .footer__container h2 {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
+}
+
+/* texto acima do input */
+.footer__container .label {
+  font-size: 1.3rem;
+  text-align: center;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  
 }
 
 /* bloco do formulário */
 .footer__container form {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    border: 1px solid var(--text-primary); /* borda estilo referência */
-    max-height: 5rem;
-}
-
-/* texto acima do input */
-.footer__container label {
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin-bottom: 0.8rem; /* separa o texto do input */
-    display: flex;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* o que separa o receba e o input*/
+  max-height: 5rem;
 }
 
 /* input de e-mail */
 .footer__container input {
-    background: var(--color-primary);
-    border: none;
-    padding: 0 1rem;
-    font-size: 1.5rem;
-    color: var(--text-primary);
-    width: 22rem;
-    height: 5rem;
-}
+  background: var(--color-primary);
+  border: none;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  width: 22rem;
+  height: 5rem;
+  }
 
 .footer__container input::placeholder {
-    color: var(--text-primary);
-    font-size: 1.3rem;
-    text-transform: uppercase;
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  text-transform: uppercase;
 }
 
 /* botão com ícone (aviãozinho) */
 .footer__container button {
-    width: 6rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--text-primary);
-    cursor: pointer;
-    border: none;
+  gap: 0;
+  width: 6rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--text-primary);
+  cursor: pointer;
+  border: none;
 }
 
 /* redes sociais */
 .socials {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.icons {
+  width: 3rem;
+  height: 3rem; 
 }
 
 /* linha divisória */
 footer > hr {
-    width: 100%;
-    max-width: 110rem;
-    border: 0.05rem solid var(--text-primary);
+  width: 100%;
+  max-width: 110rem;
+  border: 0.05rem solid var(--text-primary);
 }
 
 /* direitos autorais */
 .copyright {
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .copyright span {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
-@media screen and (max-width: 860px){
-    .footer__container{
+/* =============================
+   RESPONSIVIDADE
+============================= */
+
+@media screen and (max-width: 860px) {
+  .footer__container {
     align-items: center;
     gap: 2rem;
-    }
-    .footer__container h2{
-        font-size: 3rem;
-    }
-    .footer__container form{
-        max-width: 35rem;
-    }
-    }
+  }
 
-@media screen and (max-width: 400px){
+  .footer__container h2 {
+    font-size: 3rem;
+  }
 
-    .footer__container h2{
-        font-size: 2rem;
+  .footer__container form {
+    max-width: 35rem;
+  }
+}
 
-    }
-    .footer__container form{
-        max-width: 25rem;
-    }
-    .footer__container label{
-        font-size:  1rem;
-    }
+@media screen and (max-width: 460px) {
 
-    .footer__container input::placeholder{
-        font-size: 1rem;
+       .footer__container h2 {
+    font-size: 2rem;
+  }
 
-    }
+  .footer__container form {
+    max-width: 25rem;
+  }
 
-    .socials{
-        gap: 1rem;
-    }
+  .footer__container label {
+    font-size: 1rem;
+  }
 
-    .copyright{
-        font-size: 1rem;
-    }
+  .footer__container input::placeholder {
+    font-size: 1rem;
+  }
+
+  .socials {
+    gap: 1rem;
+  } 
+
+  .icons {
+    width: 2.8rem;
+  }
+
+ .footer__container .copyright {
+    font-size: 1rem; !important;
+  }
 }
