@@ -4,52 +4,124 @@
     <meta charset="UTF-8">
   <!--  -->  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=block" rel="stylesheet">
+    <link rel="stylesheet" href="css/contato.css">
+    
     <title>StudiOn - Contato</title>
 </head>
 <body>
-    <nav>
-       <a href="./"> <h1>Studi<span class="on">On</span> <span class="eventos">Eventos</span> </h1> <!-- SPAN É SEPARADOR, PARA CSS DIFERENTE-->    
-    </a>
-    <ul>
-             <li><a href="./empresa.html">Empresa</a></li>
+   <nav class="nav">
+        <a href="./index.html">
+   
+            <h1 class="logo">Studi<span class="on">On</span> <span class="eventos">Eventos</span> </h1> 
+        </a> <!-- SPAN É SEPARADOR, PARA CSS DIFERENTE-->         
+        
+        <input id="menu-toggle" type="checkbox"/>
+        <label class="menu-button-container" for="menu-toggle">
+
+            <div class="menu-button">
+                
+            </div>
+        </label>
+        <ul class="menu">
+            <li><a href="./empresa.html" >Empresa</a></li>
             <li><a href="./eventos.html" >Eventos</a></li>
             <li><a href="./galeria.html">Galeria</a></li>
             <li><a href="./depoimentos.html">Depoimentos</a></li>
-            <li><a href="./contato.html" class="active">Contato</a></li>
+            <li><a href="./contato.html"class="active">Contato</a></li>
         </ul>
     </nav>
-    <header>
-        <h2>.home</h2>
+<header>
+    <img class="headerbg" src="./imagens/header-contato.png" alt="Pŕedios">
+    <div class="header_background_mask"></div> <!--é o que da o tom escuro pra imagem, a pelicula-->
+    <div class="container container__header">
+        <h2>.contato</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error aperiam totam asperiores aliquam. Ipsum officia fugiat iusto saepe molestiae ut impedit, perspiciatis nemo, consectetur sunt laborum dignissimos laboriosam alias rerum.</p>
+        </div>
     </header>
+
     <main> <!-- tem o conteudo principal da página -->
+      <section class="section1">
+        <section class="section1-left">
+      <div class="section1-left__contact-container">
+        <h4> LIGUE PARA GENTE</h4>
+        <p>
+          <img class="icons" src="./imagens/icons/WhatsApp.svg" alt="simbolo do whatsapp">
+          +55 41 98408-9580
+          </p>
+          <p> 
+            <img class="icons" src="./imagens/icons/telefone.png" alt="simbolo de telefone">
+            +55 41 98408-9580
+          </p>
+          <h4> VENHA CONHECER NOSSA CASA</h4>
+          <p>
+          <img class="icons" src="./imagens/icons/pin.png" alt="simbolo de pin">
+          Rua Baltazar Carrasco dos Reis, 2050
+          </p>
+          </div>
+          </section>
+          <div class="section1-right">
+            <div class="section1-right__form-container">
+            <h4> DEIXE SUA MENSAGEM </h4>
+              <form>
+                <label for="name"> SEU NOME </label>
+                <input id="name" type="text" />
+                <label for="email"> SEU E-MAIL</label>
+                <input id="email" type="email" />
+                <label for="message"> SUA MENSAGEM</label>
+                <textarea id="message"></textarea>
+                <input type="button" />
+              </form>
+            </div>
+            </div>
+        </section>
+            
+        <section class="section2-contato">
+        <div class="maps">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.674821157617!2d-49.26971468835781!3d-25.44913287745618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce48a772c574f%3A0x3ffce647eff48792!2sR.%20Baltazar%20Carrasco%20dos%20Reis%2C%202050%20-%20Rebou%C3%A7as%2C%20Curitiba%20-%20PR%2C%2080230-070!5e0!3m2!1spt-BR!2sbr!4v1764859925383!5m2!1spt-BR!2sbr" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        </div>
+        </section>
+
+      
+
+      
     </main>
-    <footer>
-                <div>
+            <footer class="footer">
+                <div class="container footer__container">
+                   
                     <h2>Studi<span class="on">On</span> <span class="eventos">Eventos</span></h2>
-                    <form> 
-                    <label>
-                        Receba News e promoções
+                  
+                <form class="footer__form"> 
+                    
+                    <label class="label"> Receba News e promoções
                     </label> <!-- label serve como atalho para algum input, Quando clica em qualquer ponto da label, ele referencia ao input -->
-                <input type="email" placeholder="e-mail"> <!-- input não tem fechamento --> 
-                <button type="submit">
-                    <img src="/src/imagens/icons/seta.png" alt="enviar">
-                </button>
-                <ul CLASS="redes-sociais">
-                    <li><a href="#">
-                        <img src="imagens/icons/FACEBOOK.png" alt="facebook">
-                    </a></li>
-                    <li><a href="#">
-                        <img src="imagens/icons/WhatsApp.svg" alt="instagram">
-                    </a></li>
-                    <li><a href="#">
-                        <img src="imagens/icons/youtube.png" alt="youtube">
-                    </a></li>
-                </div>
-                    <hr /> 
-                </ul> 
-                          <p>Studi<span>On</span> - Todos os direitos reservados</p>
-        </form>
+                    
+                    <input type="email" placeholder="e-mail"> <!-- input não tem fechamento --> 
+                    <button type="submit">
+                    
+                      <img class="icons" src="/src/imagens/icons/seta.png" alt="enviar">
+                    </button>
+                </form>
+
+                <ul class="socials">
+                    <li><a href="#"><img class="icons" src="imagens/icons/FACEBOOK.png" alt="facebook"></a></li>
+                    <li><a href="#"><img class="icons" src="imagens/icons/WhatsApp.svg" alt="whatsapp"></a></li>
+                    <li><a href="#"><img class="icons" src="imagens/icons/youtube.png" alt="youtube"></a></li>
+                </ul>
+    </div>
+  
+
+  <hr> 
+
+  <p class="copyright">Studi<span>On</span> - Todos os direitos reservados</p>
+
+</footer>
 </body>
 </html>
